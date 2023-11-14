@@ -1,0 +1,12 @@
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Application.deps.json
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Application.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Application.pdb
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/obj/Debug/net7.0/InsuranceSystem.Application.csproj.AssemblyReference.cache
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/obj/Debug/net7.0/InsuranceSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/obj/Debug/net7.0/InsuranceSystem.Application.AssemblyInfoInputs.cache
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/obj/Debug/net7.0/InsuranceSystem.Application.AssemblyInfo.cs
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/obj/Debug/net7.0/InsuranceSystem.Application.csproj.CoreCompileInputs.cache
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/obj/Debug/net7.0/InsuranceSystem.Application.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/obj/Debug/net7.0/refint/InsuranceSystem.Application.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/obj/Debug/net7.0/InsuranceSystem.Application.pdb
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem.Application/obj/Debug/net7.0/ref/InsuranceSystem.Application.dll

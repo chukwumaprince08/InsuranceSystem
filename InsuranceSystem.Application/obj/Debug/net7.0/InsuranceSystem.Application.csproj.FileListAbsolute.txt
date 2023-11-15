@@ -27,3 +27,5 @@
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/obj/Debug/net7.0/InsuranceSystem.Application.csproj.CopyComplete
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Core.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Core.pdb
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Common.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Common.pdb

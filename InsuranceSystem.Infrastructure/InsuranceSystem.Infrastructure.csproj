@@ -25,12 +25,16 @@
     <None Remove="Repositories\" />
     <None Remove="DBContext\" />
     <None Remove="Manager\" />
+    <None Remove="Expenses\" />
+    <None Remove="Claims\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Policy\" />
     <Folder Include="Repositories\" />
     <Folder Include="DBContext\" />
     <Folder Include="Manager\" />
+    <Folder Include="Expenses\" />
+    <Folder Include="Claims\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InsuranceSystem.Domain\InsuranceSystem.Domain.csproj" />

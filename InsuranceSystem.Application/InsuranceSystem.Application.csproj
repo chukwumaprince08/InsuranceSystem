@@ -9,13 +9,18 @@
   <ItemGroup>
     <None Remove="Interface\" />
     <None Remove="Services\" />
+    <None Remove="Services\Policies\" />
+    <None Remove="Services\Claims\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
     <Folder Include="Services\" />
+    <Folder Include="Services\Policies\" />
+    <Folder Include="Services\Claims\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InsuranceSystem.Domain\InsuranceSystem.Domain.csproj" />
     <ProjectReference Include="..\InsuranceSystem.Core\InsuranceSystem.Core.csproj" />
+    <ProjectReference Include="..\InsuranceSystem.Common\InsuranceSystem.Common.csproj" />
   </ItemGroup>
 </Project>

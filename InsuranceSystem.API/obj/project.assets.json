@@ -1193,6 +1193,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "InsuranceSystem.Common": "1.0.0",
           "InsuranceSystem.Core": "1.0.0",
           "InsuranceSystem.Domain": "1.0.0"
         },
@@ -1201,6 +1202,16 @@
         },
         "runtime": {
           "bin/placeholder/InsuranceSystem.Application.dll": {}
+        }
+      },
+      "InsuranceSystem.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/InsuranceSystem.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InsuranceSystem.Common.dll": {}
         }
       },
       "InsuranceSystem.Core/1.0.0": {
@@ -3450,6 +3461,11 @@
       "path": "../InsuranceSystem.Application/InsuranceSystem.Application.csproj",
       "msbuildProject": "../InsuranceSystem.Application/InsuranceSystem.Application.csproj"
     },
+    "InsuranceSystem.Common/1.0.0": {
+      "type": "project",
+      "path": "../InsuranceSystem.Common/InsuranceSystem.Common.csproj",
+      "msbuildProject": "../InsuranceSystem.Common/InsuranceSystem.Common.csproj"
+    },
     "InsuranceSystem.Core/1.0.0": {
       "type": "project",
       "path": "../InsuranceSystem.Core/InsuranceSystem.Core.csproj",
@@ -3470,6 +3486,7 @@
     "net7.0": [
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "InsuranceSystem.Common >= 1.0.0",
       "InsuranceSystem.Domain >= 1.0.0",
       "InsuranceSystem.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.13",
@@ -3510,6 +3527,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Common/InsuranceSystem.Common.csproj": {
+              "projectPath": "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Common/InsuranceSystem.Common.csproj"
+            },
             "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Domain/InsuranceSystem.Domain.csproj": {
               "projectPath": "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Domain/InsuranceSystem.Domain.csproj"
             },

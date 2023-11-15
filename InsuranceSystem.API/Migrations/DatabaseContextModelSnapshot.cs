@@ -22,6 +22,124 @@ namespace InsuranceSystem.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("InsuranceSystem.Domain.Claims.Claim", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ClaimsId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("ClaimsStatus")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateOfExpense")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ExpenseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NationalIDOfPolicyHolder")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExpenseId");
+
+                    b.ToTable("Claims");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Amount = 20000m,
+                            ClaimsId = "CLA001",
+                            ClaimsStatus = "Submitted",
+                            DateCreated = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(8990),
+                            DateModified = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(9010),
+                            DateOfExpense = new DateTime(2023, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpenseId = 1,
+                            NationalIDOfPolicyHolder = "NGN0024AA"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Amount = 20000m,
+                            ClaimsId = "CLA002",
+                            ClaimsStatus = "Submitted",
+                            DateCreated = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(9010),
+                            DateModified = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(9010),
+                            DateOfExpense = new DateTime(2023, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpenseId = 1,
+                            NationalIDOfPolicyHolder = "NGN0014AA"
+                        });
+                });
+
+            modelBuilder.Entity("InsuranceSystem.Domain.Expenses.Expense", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ExpenseDescription")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("ExpenseType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Expenses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DateCreated = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(7230),
+                            DateModified = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(7240),
+                            ExpenseDescription = "D and C",
+                            ExpenseType = "Procedure"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DateCreated = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(7240),
+                            DateModified = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(7250),
+                            ExpenseDescription = "Typhoid and Malaria Parasite Injection",
+                            ExpenseType = "Prescription"
+                        });
+                });
+
             modelBuilder.Entity("InsuranceSystem.Domain.Policy.PolicyHolder", b =>
                 {
                     b.Property<int>("Id")
@@ -67,8 +185,8 @@ namespace InsuranceSystem.API.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2023, 11, 15, 11, 47, 34, 220, DateTimeKind.Local).AddTicks(1690),
-                            DateModified = new DateTime(2023, 11, 15, 11, 47, 34, 220, DateTimeKind.Local).AddTicks(1720),
+                            DateCreated = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(5590),
+                            DateModified = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(5630),
                             DateOfBirth = new DateTime(2000, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Precious",
                             NationalIDNumber = "NGN0014AA",
@@ -78,14 +196,25 @@ namespace InsuranceSystem.API.Migrations
                         new
                         {
                             Id = 2,
-                            DateCreated = new DateTime(2023, 11, 15, 11, 47, 34, 220, DateTimeKind.Local).AddTicks(1730),
-                            DateModified = new DateTime(2023, 11, 15, 11, 47, 34, 220, DateTimeKind.Local).AddTicks(1730),
+                            DateCreated = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(5630),
+                            DateModified = new DateTime(2023, 11, 15, 14, 12, 36, 559, DateTimeKind.Local).AddTicks(5640),
                             DateOfBirth = new DateTime(2001, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Gladys",
                             NationalIDNumber = "NGN0024AA",
                             PolicyNumber = "H2442",
                             Surname = "Chukwuma"
                         });
+                });
+
+            modelBuilder.Entity("InsuranceSystem.Domain.Claims.Claim", b =>
+                {
+                    b.HasOne("InsuranceSystem.Domain.Expenses.Expense", "Expenses")
+                        .WithMany()
+                        .HasForeignKey("ExpenseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Expenses");
                 });
 #pragma warning restore 612, 618
         }

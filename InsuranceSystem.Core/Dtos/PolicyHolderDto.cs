@@ -12,6 +12,10 @@ namespace InsuranceSystem.Core.Dtos
         public DateTime DateOfBirth { get; set; }
 
         public string PolicyNumber { get; set; }
+
+        public DateTime DateCreated { get; set; }
+
+        public DateTime DateModified { get; set; }
     }
 }
 

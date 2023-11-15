@@ -1,18 +1,20 @@
-﻿using System;
-using InsuranceSystem.Application.Interface;
+﻿using InsuranceSystem.Application.Interface;
+using InsuranceSystem.Common.Dates;
 using InsuranceSystem.Core.Dtos;
 using InsuranceSystem.Core.Interface;
 
 namespace InsuranceSystem.Application.Services
 {
-	public class PolicyServices : IPolicyService
+    public class PolicyService : IPolicyService
 	{
 		private IRepositoryManager _repoManager;
 		private IPolicyHolderRepository _PolicyHolderRepo;
-		public PolicyServices(IRepositoryManager repoManager, IPolicyHolderRepository policy)
+		private IDateService _Date;
+		public PolicyService(IRepositoryManager repoManager, IPolicyHolderRepository policy, IDateService date)
 		{
 			_repoManager = repoManager;
 			_PolicyHolderRepo = policy;
+			_Date = date;
 		}
 
         public async Task<IEnumerable<PolicyHolderDto>> GetAllPolicies()
@@ -29,12 +31,12 @@ namespace InsuranceSystem.Application.Services
 
         public async Task<PolicyHolderDto> CreatePolicy(PolicyHolderDto policyRequest)
 		{
+			policyRequest.DateCreated = policyRequest.DateModified = _Date.GetDate();	// seting initial created date
+
 			var policy = _PolicyHolderRepo.CreatePolicy(policyRequest);
 			await _repoManager.SaveChangesAsync();
 			return policy;
 		}
-
-
     }
 }
 

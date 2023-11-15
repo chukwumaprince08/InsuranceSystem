@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <None Remove="Dates\" />
+    <None Remove="Enums\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dates\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 </Project>

@@ -1087,6 +1087,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "InsuranceSystem.Common": "1.0.0",
           "InsuranceSystem.Core": "1.0.0",
           "InsuranceSystem.Domain": "1.0.0"
         },
@@ -1095,6 +1096,16 @@
         },
         "runtime": {
           "bin/placeholder/InsuranceSystem.Application.dll": {}
+        }
+      },
+      "InsuranceSystem.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/InsuranceSystem.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InsuranceSystem.Common.dll": {}
         }
       },
       "InsuranceSystem.Core/1.0.0": {
@@ -2974,6 +2985,11 @@
       "type": "project",
       "path": "../InsuranceSystem.Application/InsuranceSystem.Application.csproj",
       "msbuildProject": "../InsuranceSystem.Application/InsuranceSystem.Application.csproj"
+    },
+    "InsuranceSystem.Common/1.0.0": {
+      "type": "project",
+      "path": "../InsuranceSystem.Common/InsuranceSystem.Common.csproj",
+      "msbuildProject": "../InsuranceSystem.Common/InsuranceSystem.Common.csproj"
     },
     "InsuranceSystem.Core/1.0.0": {
       "type": "project",

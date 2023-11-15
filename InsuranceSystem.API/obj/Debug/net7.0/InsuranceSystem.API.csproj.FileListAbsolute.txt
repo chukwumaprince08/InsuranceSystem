@@ -164,3 +164,5 @@
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/InsuranceSystem.Application.pdb
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/AutoMapper.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/InsuranceSystem.Common.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/InsuranceSystem.Common.pdb

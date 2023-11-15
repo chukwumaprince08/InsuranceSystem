@@ -1,8 +1,6 @@
-﻿using AutoMapper;
-using Azure;
+﻿using InsuranceSystem.API.Dto;
 using InsuranceSystem.Application.Services;
 using InsuranceSystem.Core.Dtos;
-using InsuranceSystem.Core.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InsuranceSystem.API.Controllers
@@ -12,14 +10,20 @@ namespace InsuranceSystem.API.Controllers
     public class InsuranceSystemController: ControllerBase
     {
         private readonly IPolicyService _PolicyService;
-   
-        public InsuranceSystemController(IPolicyService policyService) =>_PolicyService = policyService;
+        protected ResponseDto _response;
+
+        public InsuranceSystemController(IPolicyService policyService)
+        {
+            _PolicyService = policyService;
+            _response = new ResponseDto();
+        }
 
         [HttpGet("GetPolicies")]
         public async Task<IActionResult> GetPolicies()
         {
             var policies = await _PolicyService.GetAllPolicies();
-            return Ok(policies);
+            _response.Result = policies;
+            return Ok(_response);
         }
 
         [HttpGet("GetPolicyByPolicyNumber")]
@@ -31,7 +35,8 @@ namespace InsuranceSystem.API.Controllers
                 if (policy is null)
                     return NotFound();
 
-                return Ok(policy);
+                _response.Result = policy;
+                return Ok(_response);
 
             }
             catch (Exception ex)
@@ -46,8 +51,8 @@ namespace InsuranceSystem.API.Controllers
         public async Task<IActionResult> CreatePolicy([FromBody] PolicyHolderDto policyHolder)
         {
             var response = await _PolicyService.CreatePolicy(policyHolder);
-
-            return CreatedAtRoute("CreatePolicy", response);
+            _response.Result = response;
+            return CreatedAtAction("CreatePolicy", _response);
         }
     }
 }

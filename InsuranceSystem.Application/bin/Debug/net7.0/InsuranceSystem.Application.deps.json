@@ -8,11 +8,17 @@
     ".NETCoreApp,Version=v7.0": {
       "InsuranceSystem.Application/1.0.0": {
         "dependencies": {
+          "InsuranceSystem.Common": "1.0.0",
           "InsuranceSystem.Core": "1.0.0",
           "InsuranceSystem.Domain": "1.0.0"
         },
         "runtime": {
           "InsuranceSystem.Application.dll": {}
+        }
+      },
+      "InsuranceSystem.Common/1.0.0": {
+        "runtime": {
+          "InsuranceSystem.Common.dll": {}
         }
       },
       "InsuranceSystem.Core/1.0.0": {
@@ -32,6 +38,11 @@
   },
   "libraries": {
     "InsuranceSystem.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InsuranceSystem.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

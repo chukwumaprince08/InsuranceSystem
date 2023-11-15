@@ -32,6 +32,9 @@
     <ProjectReference Include="..\InsuranceSystem.Infrastructure\InsuranceSystem.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\InsuranceSystem.Common\InsuranceSystem.Common.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Remove="Extensions\" />

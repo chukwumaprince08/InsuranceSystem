@@ -9,9 +9,13 @@
   <ItemGroup>
     <None Remove="Common\" />
     <None Remove="Policy\" />
+    <None Remove="Claims\" />
+    <None Remove="Expenses\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Policy\" />
+    <Folder Include="Claims\" />
+    <Folder Include="Expenses\" />
   </ItemGroup>
 </Project>

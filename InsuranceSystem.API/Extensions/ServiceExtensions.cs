@@ -1,5 +1,7 @@
 ﻿using System;
 using InsuranceSystem.Application.Interface;
+using InsuranceSystem.Application.Services;
+using InsuranceSystem.Common.Dates;
 using InsuranceSystem.Core.Interface;
 using InsuranceSystem.Infrastructure.DBContext;
 using InsuranceSystem.Infrastructure.Manager;
@@ -33,6 +35,8 @@ namespace InsuranceSystem.API.Extensions
         {
             services.AddScoped<IRepositoryManager, RepositoryManager>();
             services.AddScoped<IPolicyHolderRepository, PolicyHolderRepository>();
+            services.AddScoped<IPolicyService, PolicyService>();
+            services.AddScoped<IDateService, DateService>();
         }
     }
 }

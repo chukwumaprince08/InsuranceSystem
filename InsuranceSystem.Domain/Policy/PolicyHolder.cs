@@ -3,8 +3,7 @@
 namespace InsuranceSystem.Domain.Policy
 {
     public class PolicyHolder: BaseEntity
-	{
-		
+	{	
 		public string NationalIDNumber { get; set; }
 		
 		public string Name { get; set; }

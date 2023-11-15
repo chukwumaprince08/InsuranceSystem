@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "K0yBmL/7vjCfM8lVciHmkPvrqHrjgdMu6qLPYT9APO5JJWy/l3KsWTAiXeS3LFdF8hxG4TJL/o9ryJ7p1hneBg==",
+  "dgSpecHash": "AFBmNJsKNfp3iv64iXwzcaM1w0hpgO7zb2KpW+ZM4JfpVLKYFfOgfAw9eqC1sqgeOFPNon+zJ2DKQObH0KOhNg==",
   "success": true,
   "projectFilePath": "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/InsuranceSystem.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/precious/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",
+    "/Users/precious/.nuget/packages/microsoft.net.test.sdk/17.8.0/microsoft.net.test.sdk.17.8.0.nupkg.sha512",
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/precious/.nuget/packages/microsoft.testplatform.objectmodel/17.8.0/microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
+    "/Users/precious/.nuget/packages/microsoft.testplatform.testhost/17.8.0/microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
+    "/Users/precious/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
+    "/Users/precious/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/precious/.nuget/packages/nuget.frameworks/6.5.0/nuget.frameworks.6.5.0.nupkg.sha512",
+    "/Users/precious/.nuget/packages/nunit/3.14.0/nunit.3.14.0.nupkg.sha512",
+    "/Users/precious/.nuget/packages/nunit3testadapter/4.5.0/nunit3testadapter.4.5.0.nupkg.sha512",
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"
+  ],
   "logs": []
 }

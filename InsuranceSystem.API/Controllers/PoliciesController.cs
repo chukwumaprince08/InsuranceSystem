@@ -19,24 +19,27 @@ namespace InsuranceSystem.API.Controllers
         }
 
         [HttpGet("GetPolicies")]
-        public async Task<object> GetPolicies()
+        public async Task<ResponseDto> GetPolicies()
         {
             var policies = await _PolicyService.GetAllPolicies();
             _response.Result = policies;
-            return Ok(_response);
+            return _response;
         }
 
         [HttpGet("GetPolicyByPolicyNumber")]
-        public async Task<object> Get(string policyNumber)
+        public async Task<ResponseDto> GetPolicyByPolicyNumber(string policyNumber)
         {
             try
             {
                 var policy = await _PolicyService.GetByPolicyNumber(policyNumber);
                 if (policy is null)
-                    return NotFound();
-
+                {  
+                    _response.IsSuccess = false;
+                    _response.DisplayMessage = "Policy not found";
+                    return _response;
+                }
                 _response.Result = policy;
-                return Ok(_response);
+                return _response;
 
             }
             catch (Exception ex)
@@ -54,16 +57,19 @@ namespace InsuranceSystem.API.Controllers
         }
 
         [HttpPost("CreatePolicy")]
-        public async Task<object> CreatePolicy([FromBody] PolicyHolderDto policyHolder)
+        public async Task<ResponseDto> CreatePolicy([FromBody] PolicyHolderDto policyHolder)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+                _response.DisplayMessage = "Invalid Model";
+                _response.IsSuccess = false;
+                return _response;
+            }
 
             try
             {
                 var response = await _PolicyService.CreatePolicy(policyHolder);
                 _response.Result = response;
-                return CreatedAtAction("CreatePolicy", _response);
             }
             catch (Exception ex)
             {

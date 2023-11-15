@@ -1,4 +1,6 @@
-﻿using InsuranceSystem.Application.Services;
+﻿using System.Net;
+using InsuranceSystem.API.Dto;
+using InsuranceSystem.Application.Services;
 using InsuranceSystem.Core.Dtos;
 using Moq;
 using Moq.AutoMock;
@@ -21,17 +23,51 @@ namespace InsuranceSystem.API.Controllers
 		}
 
 		[Test]
-		public void TestShouldReturnListOfPolicies()
+		public async Task TestShouldReturnListOfPolicies()
 		{
-			var policies = new PolicyHolderDto();
+			// Arrange
+			var response = new PolicyHolderDto();
 
-			 _mocker.GetMock<IPolicyService>()
-				.Setup(x => x.GetAllPolicies())
-				.ReturnsAsync(new List<PolicyHolderDto> { policies});
+			_mocker.GetMock<IPolicyService>()
+					.Setup(x => x.GetAllPolicies())
+					.ReturnsAsync(new List<PolicyHolderDto> { response });
 
-			var result = _controller.GetPolicies();
+			// Act
+			var result = await _controller.GetPolicies();
 
-			Assert.That(result, Contains.Item(policies));
+			// Assert
+			Assert.That(result.Result, Contains.Item(response));
+		}
+
+		[Test]
+		public async Task TestShouldReturnSinglePolicy()
+		{
+			var response = new PolicyHolderDto();
+			var another = new ClaimsDto();
+
+
+			_mocker.GetMock<IPolicyService>()
+					.Setup(x => x.GetByPolicyNumber("H2441"))
+					.ReturnsAsync(response);
+
+
+			var result = await _controller.GetPolicyByPolicyNumber("H2441");
+
+			Assert.That(result.Result, Is.EqualTo(response));
+		}
+
+		[Test]
+		public async Task TestShouldCreatePolicy()
+		{
+			var policy = new PolicyHolderDto();
+
+			var result =  await _controller.CreatePolicy(policy);
+
+			_mocker.GetMock<IPolicyService>()
+					.Verify(x => x.CreatePolicy(policy), Times.Once);
+			
+			Assert.That(result.IsSuccess, Is.True);
+			
 		}
 	}
 }

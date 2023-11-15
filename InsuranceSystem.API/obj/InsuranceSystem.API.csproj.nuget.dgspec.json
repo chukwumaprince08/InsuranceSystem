@@ -84,6 +84,10 @@
               "target": "Package",
               "version": "[7.0.13, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
             "NUnit": {
               "target": "Package",
               "version": "[3.14.0, )"

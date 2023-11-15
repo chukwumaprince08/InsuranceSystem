@@ -10,7 +10,7 @@ namespace InsuranceSystem.Application.Interface
         Task<IEnumerable<PolicyHolderDto>> GetByNationalID(string nationalId);
         Task<PolicyHolderDto> GetById(int id);
 
-        PolicyHolderDto CreatePolicy(PolicyHolderDto policyRequest);
+        PolicyHolderDto CreatePolicy(PolicyHolderDto policyRequest, DateTime dateCreated);
     }
 }
 

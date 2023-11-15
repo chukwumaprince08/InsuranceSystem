@@ -31,9 +31,8 @@ namespace InsuranceSystem.Application.Services
 
         public async Task<PolicyHolderDto> CreatePolicy(PolicyHolderDto policyRequest)
 		{
-			policyRequest.DateCreated = policyRequest.DateModified = _Date.GetDate();	// seting initial created date
-
-			var policy = _PolicyHolderRepo.CreatePolicy(policyRequest);
+			var currentDate = _Date.GetDate();
+			var policy = _PolicyHolderRepo.CreatePolicy(policyRequest, currentDate);
 			await _repoManager.SaveChangesAsync();
 			return policy;
 		}

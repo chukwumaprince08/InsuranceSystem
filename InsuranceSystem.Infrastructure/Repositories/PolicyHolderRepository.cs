@@ -42,9 +42,11 @@ namespace InsuranceSystem.Infrastructure.Repositories
             return _mapper.Map<PolicyHolderDto>(response);
         }
 
-        public PolicyHolderDto CreatePolicy(PolicyHolderDto policyRequest)
+        public PolicyHolderDto CreatePolicy(PolicyHolderDto policyRequest, DateTime dateCreated)
         {
             var policy = _mapper.Map<PolicyHolder>(policyRequest);
+            policy.DateCreated = policy.DateModified = dateCreated;
+
             Create(policy);
             
             return _mapper.Map<PolicyHolderDto>(policy);

@@ -19,7 +19,7 @@ namespace InsuranceSystem.API.Controllers
         }
 
         [HttpGet("GetPolicies")]
-        public async Task<IActionResult> GetPolicies()
+        public async Task<object> GetPolicies()
         {
             var policies = await _PolicyService.GetAllPolicies();
             _response.Result = policies;
@@ -43,16 +43,39 @@ namespace InsuranceSystem.API.Controllers
             {
                 // handle exception
                 var log = ex.Message;
+                _response = new ResponseDto
+                {
+                    DisplayMessage = "An error occured",
+                    IsSuccess = false,
+                    Result = null
+                };
             }
-            return NotFound();
+            return _response;
         }
 
         [HttpPost("CreatePolicy")]
-        public async Task<IActionResult> CreatePolicy([FromBody] PolicyHolderDto policyHolder)
+        public async Task<object> CreatePolicy([FromBody] PolicyHolderDto policyHolder)
         {
-            var response = await _PolicyService.CreatePolicy(policyHolder);
-            _response.Result = response;
-            return CreatedAtAction("CreatePolicy", _response);
+            try
+            {
+
+                var response = await _PolicyService.CreatePolicy(policyHolder);
+                _response.Result = response;
+                return CreatedAtAction("CreatePolicy", _response);
+            }
+            catch (Exception ex)
+            {
+                // catch the error and log it
+                var log = ex.Message;
+
+                _response = new ResponseDto
+                {
+                    DisplayMessage = "An error occured",
+                    IsSuccess = false,
+                    Result = null
+                };
+            }
+            return _response;
         }
     }
 }

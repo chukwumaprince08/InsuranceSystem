@@ -37,6 +37,7 @@ namespace InsuranceSystem.API.Extensions
             services.AddScoped<IPolicyHolderRepository, PolicyHolderRepository>();
             services.AddScoped<IPolicyService, PolicyService>();
             services.AddScoped<IDateService, DateService>();
+            services.AddScoped<IClaimsRepository, ClaimsRepository>();
         }
     }
 }

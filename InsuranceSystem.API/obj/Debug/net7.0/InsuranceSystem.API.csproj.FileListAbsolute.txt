@@ -166,3 +166,15 @@
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/InsuranceSystem.Common.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/InsuranceSystem.Common.pdb
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/NUnit3.TestAdapter.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/NUnit3.TestAdapter.pdb
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/nunit.engine.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/nunit.engine.api.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/nunit.engine.core.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/testcentric.engine.metadata.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/Castle.Core.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/Moq.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/Moq.AutoMock.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/Moq.EntityFrameworkCore.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/NonBlocking.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/bin/Debug/net7.0/nunit.framework.dll

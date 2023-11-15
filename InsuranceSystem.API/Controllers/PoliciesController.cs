@@ -56,9 +56,11 @@ namespace InsuranceSystem.API.Controllers
         [HttpPost("CreatePolicy")]
         public async Task<object> CreatePolicy([FromBody] PolicyHolderDto policyHolder)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             try
             {
-
                 var response = await _PolicyService.CreatePolicy(policyHolder);
                 _response.Result = response;
                 return CreatedAtAction("CreatePolicy", _response);

@@ -1,49 +1,43 @@
 ﻿<Properties StartupConfiguration="{F24C6AFF-0F88-46B8-B598-0E51039F1705}|https">
   <MonoDevelop.Ide.ItemProperties.Presentation.InsuranceSystem.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/Controllers/PoliciesController.cs" relfile="InsuranceSystem.API/Controllers/PoliciesController.cs" line="58" column="1" />
+      <Breakpoint file="/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.API/Controllers/PoliciesControllerTests.cs" relfile="InsuranceSystem.API/Controllers/PoliciesControllerTests.cs" line="25" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="InsuranceSystem.Infrastructure/DBContext/DatabaseContext.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="InsuranceSystem.API/Controllers/PoliciesControllerTests.cs">
     <Files>
-      <File FileName="InsuranceSystem.Infrastructure/Repositories/PolicyHandlerRepository.cs" Line="18" Column="1" />
-      <File FileName="InsuranceSystem.Infrastructure/Repositories/GenericRepository.cs" Line="9" Column="27" />
-      <File FileName="InsuranceSystem.Core/Interface/IRepositoryBase.cs" Line="1" Column="1" />
-      <File FileName="InsuranceSystem.Core/Interface/IPolicyHolderRepository.cs" Line="1" Column="1" />
-      <File FileName="InsuranceSystem.Infrastructure/DBContext/DatabaseContext.cs" Line="8" Column="18" />
+      <File FileName="InsuranceSystem.API/Controllers/PoliciesControllerTests.cs" Line="34" Column="42" />
+      <File FileName="InsuranceSystem.API/Controllers/PoliciesController.cs" Line="12" Column="40" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="InsuranceSystem" expanded="True">
-            <Node name="Application" expanded="True">
-              <Node name="InsuranceSystem.Application" expanded="True" />
-            </Node>
-            <Node name="Common" expanded="True" />
+            <Node name="Application" expanded="True" />
             <Node name="Core" expanded="True">
-              <Node name="InsuranceSystem.Core">
-                <Node name="Interface" expanded="True" />
-              </Node>
+              <Node name="InsuranceSystem.Core" expanded="True" />
             </Node>
-            <Node name="Domain" expanded="True">
-              <Node name="InsuranceSystem.Domain" expanded="True">
-                <Node name="Policy" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="Infrastructure" expanded="True">
-              <Node name="InsuranceSystem.Infrastructure">
-                <Node name="DBContext" expanded="True">
-                  <Node name="DatabaseContext.cs" selected="True" />
+            <Node name="Presentation" expanded="True">
+              <Node name="InsuranceSystem.API" selected="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
                 </Node>
-                <Node name="Repositories" expanded="True" />
+                <Node name="Controllers" expanded="True" />
               </Node>
             </Node>
-            <Node name="Presentation" expanded="True" />
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="InsuranceSystem" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

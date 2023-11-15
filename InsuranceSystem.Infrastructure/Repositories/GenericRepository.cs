@@ -23,6 +23,7 @@ namespace InsuranceSystem.Infrastructure.Repositories
             .Where(expression)
             .AsNoTracking() : _db.Set<T>()
             .Where(expression);
+
         public void Update(T entity) => _db.Set<T>().Update(entity);
 
 

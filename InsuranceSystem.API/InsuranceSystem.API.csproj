@@ -39,9 +39,11 @@
   <ItemGroup>
     <None Remove="Extensions\" />
     <None Remove="Dto\" />
+    <None Remove="Helper\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />
     <Folder Include="Dto\" />
+    <Folder Include="Helper\" />
   </ItemGroup>
 </Project>

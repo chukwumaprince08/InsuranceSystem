@@ -45,6 +45,19 @@ namespace InsuranceSystem.Infrastructure.Repositories
 
             return _mapper.Map<ClaimsResponseDto>(claim);
         }
+
+        public async Task<ClaimsResponseDto> UpdateClaim(int id, string status)
+        {
+            var claim = await FindByCondition(x => x.Id == id, false).FirstOrDefaultAsync();
+            if (claim is null)
+                return null;
+
+            claim.ClaimsStatus = status;
+            claim.DateModified = DateTime.Now;
+            Update(claim);
+
+            return _mapper.Map<ClaimsResponseDto>(claim);
+        }
     }
 }
 

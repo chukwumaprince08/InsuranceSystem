@@ -8,6 +8,7 @@ namespace InsuranceSystem.Application.Interface
         Task<IEnumerable<ClaimsResponseDto>> GetAllClaims();
         Task<ClaimsResponseDto> GetClaimById(string id);
         ClaimsResponseDto CreateClaim(ClaimsDto claimRequest, DateTime dateCreated);
+        Task<ClaimsResponseDto> UpdateClaim(int id, string status);
     }
 }
 

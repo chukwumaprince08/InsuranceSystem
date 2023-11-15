@@ -1,4 +1,5 @@
 ﻿using InsuranceSystem.Application.Interface;
+using InsuranceSystem.Common;
 using InsuranceSystem.Common.Dates;
 using InsuranceSystem.Core.Dtos;
 using InsuranceSystem.Core.Interface;
@@ -30,6 +31,50 @@ namespace InsuranceSystem.Application.Services.Claims
             await _repoManager.SaveChangesAsync();
             return claim;
         }
+
+
+        public async Task<ClaimsResponseDto?> UpdateClaim(int id, string status)
+        {
+            var claimsStatus = ""; 
+
+            if (id <= 0 || string.IsNullOrWhiteSpace(status))
+                return null;
+
+            switch (status)
+            {
+                case "Approved":
+                case "APPROVED":
+                    claimsStatus = ClaimsStatusEnums.Approved.ToString();
+                    break;
+
+                case "Declined":
+                case "DECLINED":
+                    claimsStatus = ClaimsStatusEnums.Declined.ToString();
+                    break;
+
+                case "In-Review":
+                case "IN-REVIEW":
+                    claimsStatus = ClaimsStatusEnums.InReview.ToString();
+                    break;
+
+                default:
+                    // do nothing since we have retrieve the default value already
+                    break;
+            }
+
+            if (string.IsNullOrWhiteSpace(claimsStatus))
+                return null;
+
+            var claim = await _ClaimsRepo.UpdateClaim(id, claimsStatus);
+            if(claim is not null)
+            {
+                await _repoManager.SaveChangesAsync();
+                return claim;
+            }
+            return null;
+            
+        }
+        
     }
 }
 

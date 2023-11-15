@@ -1,0 +1,16 @@
+﻿To run this application, kindly change the connection string in the appSettings.json to suit your own environment
+execute migrations then the tables and seed data will be created and migrated to your environment
+for example: open terminal or package manager console and enter doentet ef database update
+
+
+Note: For demo purpose:
+I implemented a small code unit to allow Admin users to pass in a default value in the header.
+I will use this to differentiate between an admin user and a regular user.
+This should not be used in an ideal production related environment
+
+In the case of updating a claim, only the following status are allowed:
+1) "Approved" or "APPROVED"
+2) "Declined" or "DECLINED"
+3) "In-Review" or "IN-REVIEW"
+
+Also note that in an ideal production environment, an API will be used to pull the status and it will be passed from the frontend to the API

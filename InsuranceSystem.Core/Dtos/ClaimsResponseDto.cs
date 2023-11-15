@@ -3,6 +3,8 @@ namespace InsuranceSystem.Core.Dtos
 {
 	public class ClaimsResponseDto
 	{
+        public int Id { get; set; }
+
         public string ClaimsId { get; set; }
 
         public string NationalIDOfPolicyHolder { get; set; }

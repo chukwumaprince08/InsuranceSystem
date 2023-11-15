@@ -1,16 +1,15 @@
 ﻿using InsuranceSystem.Core.Dtos;
-using InsuranceSystem.Domain.Policy;
 
-namespace InsuranceSystem.Application.Interface
+namespace InsuranceSystem.Application.Services
 {
-    public interface IPolicyHolderRepository
-    {
+    public interface IPolicyService
+	{
         Task<IEnumerable<PolicyHolderDto>> GetAllPolicies();
         Task<PolicyHolderDto> GetByPolicyNumber(string policyNumber);
         Task<IEnumerable<PolicyHolderDto>> GetByNationalID(string nationalId);
         Task<PolicyHolderDto> GetById(int id);
+        Task<PolicyHolderDto> CreatePolicy(PolicyHolderDto policyRequest);
 
-        PolicyHolderDto CreatePolicy(PolicyHolderDto policyRequest);
     }
 }
 

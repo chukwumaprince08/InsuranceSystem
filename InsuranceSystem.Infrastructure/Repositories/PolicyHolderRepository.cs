@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Azure;
 using InsuranceSystem.Application.Interface;
 using InsuranceSystem.Core.Dtos;
 using InsuranceSystem.Domain.Policy;
@@ -18,28 +19,36 @@ namespace InsuranceSystem.Infrastructure.Repositories
             return _mapper.Map<List<PolicyHolderDto>>(policies);
         }
 
-        public async Task<PolicyHolder> GetByPolicyNumber(string policyNumber)
+        public async Task<PolicyHolderDto> GetByPolicyNumber(string policyNumber)
         {
-            var request = await FindByCondition(x => x.PolicyNumber == policyNumber, true)
+            var response = await FindByCondition(x => x.PolicyNumber == policyNumber, true)
                                 .FirstOrDefaultAsync();
-            return request;
+
+            return _mapper.Map<PolicyHolderDto>(response);
         }
 
-        public async Task<IEnumerable<PolicyHolder>> GetByNationalID(string nationalId)
+        // there are chances that a customer with nationalId could have more than once policies, hence we return a list
+        public async Task<IEnumerable<PolicyHolderDto>> GetByNationalID(string nationalId)
         {
-            var request = await FindByCondition(x => x.NationalIDNumber == nationalId, true)
+            var response = await FindByCondition(x => x.NationalIDNumber == nationalId, true)
                                 .ToListAsync();
-            return request;
+            return _mapper.Map<List<PolicyHolderDto>>(response);
         }
 
-        public async Task<PolicyHolder> GetById(int id)
+        public async Task<PolicyHolderDto> GetById(int id)
         {
-            var request = await FindByCondition(x => x.Id == id, true)
+            var response = await FindByCondition(x => x.Id == id, true)
                 .FirstOrDefaultAsync();
-            return request;
+            return _mapper.Map<PolicyHolderDto>(response);
         }
 
-        public void CreatePolicy(PolicyHolder policy) =>  Create(policy);
+        public PolicyHolderDto CreatePolicy(PolicyHolderDto policyRequest)
+        {
+            var policy = _mapper.Map<PolicyHolder>(policyRequest);
+            Create(policy);
+            
+            return _mapper.Map<PolicyHolderDto>(policy);
+        }
     }
 }
 

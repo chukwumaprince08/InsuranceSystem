@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "InsuranceSystem.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/InsuranceSystem.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InsuranceSystem.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "InsuranceSystem.Domain/1.0.0": {
+      "type": "project",
+      "path": "../InsuranceSystem.Domain/InsuranceSystem.Domain.csproj",
+      "msbuildProject": "../InsuranceSystem.Domain/InsuranceSystem.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "InsuranceSystem.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/precious/.nuget/packages/": {},
@@ -35,7 +54,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Domain/InsuranceSystem.Domain.csproj": {
+              "projectPath": "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Domain/InsuranceSystem.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

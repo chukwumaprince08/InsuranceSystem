@@ -614,6 +614,9 @@
         }
       },
       "InsuranceSystem.Core/1.0.0": {
+        "dependencies": {
+          "InsuranceSystem.Domain": "1.0.0"
+        },
         "runtime": {
           "InsuranceSystem.Core.dll": {}
         }

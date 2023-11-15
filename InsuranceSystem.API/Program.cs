@@ -1,5 +1,4 @@
-﻿using InsuranceSystem.Infrastructure.DBContext;
-using Microsoft.EntityFrameworkCore;
+﻿using InsuranceSystem.API.Extensions;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,8 +20,8 @@ builder.Services.AddSwaggerGen(c =>
 
 });
 
-builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+builder.Services.ConfigureExtensionServices();
+builder.Services.ConfigureSqlContext(Configuration);
 
 var app = builder.Build();
 
@@ -30,7 +29,8 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+   
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("../swagger/v1/swagger.json", "Insurance Systems.API v1"));
 }
 
 app.UseHttpsRedirection();

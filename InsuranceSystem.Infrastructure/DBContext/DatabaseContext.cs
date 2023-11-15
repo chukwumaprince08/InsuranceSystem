@@ -1,5 +1,4 @@
-﻿using System;
-using InsuranceSystem.Domain.Policy;
+﻿using InsuranceSystem.Domain.Policy;
 using InsuranceSystem.Infrastructure.Policy;
 using Microsoft.EntityFrameworkCore;
 

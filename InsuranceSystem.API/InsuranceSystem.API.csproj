@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
@@ -23,12 +23,6 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="Db\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Db\" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InsuranceSystem.Domain\InsuranceSystem.Domain.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>

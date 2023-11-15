@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,14 +21,17 @@
   <ItemGroup>
     <None Remove="Policy\" />
     <None Remove="Repositories\" />
-    <None Remove="Interface\" />
+    <None Remove="DBContext\" />
+    <None Remove="Manager\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Policy\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Interface\" />
+    <Folder Include="DBContext\" />
+    <Folder Include="Manager\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InsuranceSystem.Domain\InsuranceSystem.Domain.csproj" />
+    <ProjectReference Include="..\InsuranceSystem.Core\InsuranceSystem.Core.csproj" />
   </ItemGroup>
 </Project>

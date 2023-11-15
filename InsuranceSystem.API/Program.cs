@@ -1,5 +1,4 @@
-﻿using InsuranceSystem.API.Db;
-using InsuranceSystem.Infrastructure.Repositories;
+﻿using InsuranceSystem.Infrastructure.DBContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 

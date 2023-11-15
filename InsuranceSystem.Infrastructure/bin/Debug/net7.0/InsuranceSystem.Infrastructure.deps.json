@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "InsuranceSystem.Infrastructure/1.0.0": {
         "dependencies": {
+          "InsuranceSystem.Core": "1.0.0",
           "InsuranceSystem.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.Design": "7.0.13",
@@ -612,6 +613,11 @@
           }
         }
       },
+      "InsuranceSystem.Core/1.0.0": {
+        "runtime": {
+          "InsuranceSystem.Core.dll": {}
+        }
+      },
       "InsuranceSystem.Domain/1.0.0": {
         "runtime": {
           "InsuranceSystem.Domain.dll": {}
@@ -1044,6 +1050,11 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "InsuranceSystem.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "InsuranceSystem.Domain/1.0.0": {
       "type": "project",

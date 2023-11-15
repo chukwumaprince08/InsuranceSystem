@@ -1160,6 +1160,16 @@
           }
         }
       },
+      "InsuranceSystem.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/InsuranceSystem.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InsuranceSystem.Core.dll": {}
+        }
+      },
       "InsuranceSystem.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1174,6 +1184,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "InsuranceSystem.Core": "1.0.0",
           "InsuranceSystem.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
@@ -3354,6 +3365,11 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "InsuranceSystem.Core/1.0.0": {
+      "type": "project",
+      "path": "../InsuranceSystem.Core/InsuranceSystem.Core.csproj",
+      "msbuildProject": "../InsuranceSystem.Core/InsuranceSystem.Core.csproj"
     },
     "InsuranceSystem.Domain/1.0.0": {
       "type": "project",

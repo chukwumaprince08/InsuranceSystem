@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="PolicyHolder\" />
+    <None Remove="PolicyHolderServices\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="PolicyHolder\" />
+    <Folder Include="PolicyHolderServices\" />
   </ItemGroup>
 </Project>

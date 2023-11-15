@@ -1054,6 +1054,16 @@
           }
         }
       },
+      "InsuranceSystem.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/InsuranceSystem.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InsuranceSystem.Core.dll": {}
+        }
+      },
       "InsuranceSystem.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2884,6 +2894,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "InsuranceSystem.Core/1.0.0": {
+      "type": "project",
+      "path": "../InsuranceSystem.Core/InsuranceSystem.Core.csproj",
+      "msbuildProject": "../InsuranceSystem.Core/InsuranceSystem.Core.csproj"
+    },
     "InsuranceSystem.Domain/1.0.0": {
       "type": "project",
       "path": "../InsuranceSystem.Domain/InsuranceSystem.Domain.csproj",
@@ -2892,6 +2907,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "InsuranceSystem.Core >= 1.0.0",
       "InsuranceSystem.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
@@ -2928,6 +2944,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/InsuranceSystem.Core.csproj": {
+              "projectPath": "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/InsuranceSystem.Core.csproj"
+            },
             "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Domain/InsuranceSystem.Domain.csproj": {
               "projectPath": "/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Domain/InsuranceSystem.Domain.csproj"
             }

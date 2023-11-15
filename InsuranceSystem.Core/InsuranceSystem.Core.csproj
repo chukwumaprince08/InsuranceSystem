@@ -3,16 +3,16 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Interface\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interface\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\InsuranceSystem.Domain\InsuranceSystem.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Dtos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dtos\" />
   </ItemGroup>
 </Project>

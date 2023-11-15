@@ -22,3 +22,8 @@
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/obj/Debug/net7.0/refint/InsuranceSystem.Application.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/obj/Debug/net7.0/InsuranceSystem.Application.pdb
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/obj/Debug/net7.0/ref/InsuranceSystem.Application.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Domain.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Domain.pdb
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/obj/Debug/net7.0/InsuranceSystem.Application.csproj.CopyComplete
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Core.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Application/bin/Debug/net7.0/InsuranceSystem.Core.pdb

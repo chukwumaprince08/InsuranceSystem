@@ -10,8 +10,11 @@ namespace InsuranceSystem.Infrastructure.Repositories
         protected DatabaseContext _db;
         
         public GenericRepository(DatabaseContext db) => _db = db;
+
         public void Create(T entity) => _db.Set<T>().Add(entity);
+
         public void Delete(T entity) => _db.Set<T>().Remove(entity);
+
         public IQueryable<T> FindAll(bool trackChanges) =>
             !trackChanges ? _db.Set<T>().AsNoTracking() : _db.Set<T>();
 

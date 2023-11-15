@@ -51,3 +51,5 @@
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/obj/Debug/net7.0/ref/InsuranceSystem.Infrastructure.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Core.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Core.pdb
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Application.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Application.pdb

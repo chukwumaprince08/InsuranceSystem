@@ -7,14 +7,41 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "InsuranceSystem.Application/1.0.0": {
+        "dependencies": {
+          "InsuranceSystem.Core": "1.0.0",
+          "InsuranceSystem.Domain": "1.0.0"
+        },
         "runtime": {
           "InsuranceSystem.Application.dll": {}
+        }
+      },
+      "InsuranceSystem.Core/1.0.0": {
+        "dependencies": {
+          "InsuranceSystem.Domain": "1.0.0"
+        },
+        "runtime": {
+          "InsuranceSystem.Core.dll": {}
+        }
+      },
+      "InsuranceSystem.Domain/1.0.0": {
+        "runtime": {
+          "InsuranceSystem.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "InsuranceSystem.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InsuranceSystem.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InsuranceSystem.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

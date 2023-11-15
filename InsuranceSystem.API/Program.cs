@@ -1,4 +1,6 @@
-﻿using InsuranceSystem.API.Extensions;
+﻿using AutoMapper;
+using InsuranceSystem.API;
+using InsuranceSystem.API.Extensions;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +21,11 @@ builder.Services.AddSwaggerGen(c =>
     });
 
 });
+
+IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+
+builder.Services.AddSingleton(mapper);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.ConfigureExtensionServices();
 builder.Services.ConfigureSqlContext(Configuration);

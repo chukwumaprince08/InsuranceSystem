@@ -1,4 +1,6 @@
-﻿using InsuranceSystem.Core.Interface;
+﻿using AutoMapper;
+using InsuranceSystem.Application.Interface;
+using InsuranceSystem.Core.Dtos;
 using InsuranceSystem.Domain.Policy;
 using InsuranceSystem.Infrastructure.DBContext;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +9,14 @@ namespace InsuranceSystem.Infrastructure.Repositories
 {
     public class PolicyHolderRepository : GenericRepository<PolicyHolder>, IPolicyHolderRepository
     {
-        public PolicyHolderRepository(DatabaseContext db) : base(db) { }
+        private IMapper _mapper;
+        public PolicyHolderRepository(DatabaseContext db, IMapper mapper) : base(db) { _mapper = mapper; }
+
+        public async Task<IEnumerable<PolicyHolderDto>> GetAllPolicies()
+        {
+            var policies = await FindAll(false).ToListAsync();
+            return _mapper.Map<List<PolicyHolderDto>>(policies);
+        }
 
         public async Task<PolicyHolder> GetByPolicyNumber(string policyNumber)
         {
@@ -29,6 +38,8 @@ namespace InsuranceSystem.Infrastructure.Repositories
                 .FirstOrDefaultAsync();
             return request;
         }
+
+        public void CreatePolicy(PolicyHolder policy) =>  Create(policy);
     }
 }
 

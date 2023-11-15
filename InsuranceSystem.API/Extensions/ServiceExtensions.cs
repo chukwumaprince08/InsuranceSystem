@@ -1,4 +1,5 @@
 ﻿using System;
+using InsuranceSystem.Application.Interface;
 using InsuranceSystem.Core.Interface;
 using InsuranceSystem.Infrastructure.DBContext;
 using InsuranceSystem.Infrastructure.Manager;
@@ -14,7 +15,7 @@ namespace InsuranceSystem.API.Extensions
             services.AddDbContext<DatabaseContext>(options => options
                 .UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
                  b => b
-                .MigrationsAssembly("InsuranceSystem.Infrastructure")));
+                .MigrationsAssembly("InsuranceSystem.API")));
         }
 
         public static void ConfigureCors(this IServiceCollection services) =>

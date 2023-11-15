@@ -5,9 +5,9 @@ namespace InsuranceSystem.Application.Interface
     public interface IClaimsRepository
 	{
         Task<IEnumerable<ClaimsDto>> GetClaimByNationalID(string nationalId);
-        Task<IEnumerable<ClaimsDto>> GetAllClaims();
-        Task<ClaimsDto> GetClaimById(int id);
-        ClaimsDto CreateClaim(ClaimsDto claimRequest, DateTime dateCreated);
+        Task<IEnumerable<ClaimsResponseDto>> GetAllClaims();
+        Task<ClaimsResponseDto> GetClaimById(string id);
+        ClaimsResponseDto CreateClaim(ClaimsDto claimRequest, DateTime dateCreated);
     }
 }
 

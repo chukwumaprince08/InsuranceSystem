@@ -7,12 +7,12 @@ namespace InsuranceSystem.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class InsuranceSystemController: ControllerBase
+    public class PoliciesController : ControllerBase
     {
         private readonly IPolicyService _PolicyService;
         protected ResponseDto _response;
 
-        public InsuranceSystemController(IPolicyService policyService)
+        public PoliciesController (IPolicyService policyService)
         {
             _PolicyService = policyService;
             _response = new ResponseDto();

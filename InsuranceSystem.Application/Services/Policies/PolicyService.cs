@@ -7,9 +7,9 @@ namespace InsuranceSystem.Application.Services
 {
     public class PolicyService : IPolicyService
 	{
-		private IRepositoryManager _repoManager;
-		private IPolicyHolderRepository _PolicyHolderRepo;
-		private IDateService _Date;
+		private readonly IRepositoryManager _repoManager;
+		private readonly IPolicyHolderRepository _PolicyHolderRepo;
+		private readonly IDateService _Date;
 		public PolicyService(IRepositoryManager repoManager, IPolicyHolderRepository policy, IDateService date)
 		{
 			_repoManager = repoManager;

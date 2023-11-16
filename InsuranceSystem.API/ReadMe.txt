@@ -28,3 +28,6 @@ request body:
 Headers:
 Key: TempAuth
 Value: can be anything.
+
+Please note that in a real life senario, this project would have a logging and an authentication system.
+But i had to do a lot of tradeoffs since this is a demo system

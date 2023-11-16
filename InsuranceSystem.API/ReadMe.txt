@@ -1,4 +1,14 @@
-﻿To run this application, kindly change the connection string in the appSettings.json to suit your own environment
+﻿Overview:
+This system was built with the following tools
+ .NET 7
+EF Core 7
+NUnit
+MSSSQL Server
+Visual Studio for MAC. (But the solution can run on windows since it is a .net core solution which is cross platform).
+
+I adopted Clean architecture with a touch of Repository Pattern
+
+To run this application, kindly change the connection string in the appSettings.json to suit your own environment
 execute migrations then the tables and seed data will be created and migrated to your environment
 for example: open terminal or package manager console and enter doentet ef database update
 
@@ -29,5 +39,6 @@ Headers:
 Key: TempAuth
 Value: can be anything.
 
-Please note that in a real life senario, this project would have a logging and an authentication system.
+Please note that in a real life senario, this project would have a logging system, Encryption module using RSACryptoServiceProvider that was built in
+.net and an authentication system. But these modules were skipped for brevity
 But i had to do a lot of tradeoffs since this is a demo system

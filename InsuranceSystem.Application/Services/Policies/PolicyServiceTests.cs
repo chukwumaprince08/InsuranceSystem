@@ -1,5 +1,4 @@
 ﻿using InsuranceSystem.Application.Interface;
-using InsuranceSystem.Application.Services.Claims;
 using InsuranceSystem.Core.Dtos;
 using Moq;
 using Moq.AutoMock;
@@ -77,6 +76,23 @@ namespace InsuranceSystem.Application.Services.Policies
             var result = await _policyService.GetByPolicyNumber(policyNumber);
 
             Assert.That(result, Is.EqualTo(response));
+        }
+
+        [Test]
+        public async Task RepositoryMethodShouldSuccessfullyCreatePolicy()
+        {
+            var request = new PolicyHolderDto();
+
+            var date = DateTime.Now;
+
+            _mocker.GetMock<IPolicyHolderRepository>()
+                .Setup(x => x.CreatePolicy(request, date))
+                .Returns(request);
+
+            var result = await _policyService.CreatePolicy(request);
+
+            Assert.That(result, Is.TypeOf(request.GetType()));
+            Assert.IsNotNull(result);
         }
     }
 }

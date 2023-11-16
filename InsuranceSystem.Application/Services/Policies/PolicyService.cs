@@ -34,7 +34,8 @@ namespace InsuranceSystem.Application.Services
 			var currentDate = _Date.GetDate();
 			var policy = _PolicyHolderRepo.CreatePolicy(policyRequest, currentDate);
 			await _repoManager.SaveChangesAsync();
-			return policy;
+
+			return policy ?? new PolicyHolderDto();
 		}
     }
 }

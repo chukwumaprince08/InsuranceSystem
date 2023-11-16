@@ -1,6 +1,4 @@
-﻿using System.Net;
-using InsuranceSystem.API.Dto;
-using InsuranceSystem.Application.Services;
+﻿using InsuranceSystem.Application.Services;
 using InsuranceSystem.Core.Dtos;
 using Moq;
 using Moq.AutoMock;

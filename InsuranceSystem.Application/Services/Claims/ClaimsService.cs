@@ -29,9 +29,11 @@ namespace InsuranceSystem.Application.Services.Claims
             var currentDate = _Date.GetDate();
             var claim = _ClaimsRepo.CreateClaim(claimRequest, currentDate);
             await _repoManager.SaveChangesAsync();
-            return claim;
+            return claim ?? new ClaimsResponseDto();
         }
 
+        public async Task<IEnumerable<ClaimsDto>> GetClaimsByNationalID(string naitionalId)
+            => await _ClaimsRepo.GetClaimByNationalID(naitionalId);
 
         public async Task<ClaimsResponseDto?> UpdateClaim(int id, string status)
         {

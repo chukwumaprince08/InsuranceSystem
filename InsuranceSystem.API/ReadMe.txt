@@ -14,3 +14,17 @@ In the case of updating a claim, only the following status are allowed:
 3) "In-Review" or "IN-REVIEW"
 
 Also note that in an ideal production environment, an API will be used to pull the status and it will be passed from the frontend to the API
+
+
+Please note that you will not be able to use Swagger to test the Update and Get all claims end point as it requires header authentication.
+Kindly use Postman or Insomnia to simulate this process.
+For example,
+request body:
+{
+  "id": 1,
+  "claimsStatus": "Declined"
+}
+
+Headers:
+Key: TempAuth
+Value: can be anything.

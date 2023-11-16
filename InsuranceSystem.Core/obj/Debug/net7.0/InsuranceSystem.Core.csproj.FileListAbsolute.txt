@@ -10,6 +10,14 @@
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem.Core/obj/Debug/net7.0/refint/InsuranceSystem.Core.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem.Core/obj/Debug/net7.0/InsuranceSystem.Core.pdb
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem.Core/obj/Debug/net7.0/ref/InsuranceSystem.Core.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/InsuranceSystem.Domain.deps.json
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/InsuranceSystem.Domain.runtimeconfig.json
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/NUnit3.TestAdapter.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/NUnit3.TestAdapter.pdb
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/nunit.engine.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/nunit.engine.api.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/nunit.engine.core.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/testcentric.engine.metadata.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/InsuranceSystem.Core.deps.json
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/InsuranceSystem.Core.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Core/bin/Debug/net7.0/InsuranceSystem.Core.pdb

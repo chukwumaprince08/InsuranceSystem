@@ -1550,6 +1550,7 @@
           "InsuranceSystem.Common": "1.0.0",
           "InsuranceSystem.Core": "1.0.0",
           "InsuranceSystem.Domain": "1.0.0",
+          "Microsoft.NET.Test.Sdk": "17.8.0",
           "Moq": "4.20.69",
           "Moq.AutoMock": "3.5.0",
           "Moq.EntityFrameworkCore": "7.0.0.2",

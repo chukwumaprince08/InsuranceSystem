@@ -32,12 +32,16 @@
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem.Infrastructure/obj/Debug/net7.0/InsuranceSystem.Infrastructure.pdb
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem.Infrastructure/obj/Debug/net7.0/InsuranceSystem.Infrastructure.genruntimeconfig.cache
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem.Infrastructure/obj/Debug/net7.0/ref/InsuranceSystem.Infrastructure.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Domain.deps.json
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Domain.runtimeconfig.json
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/NUnit3.TestAdapter.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/NUnit3.TestAdapter.pdb
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/nunit.engine.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/nunit.engine.api.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/nunit.engine.core.dll
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/testcentric.engine.metadata.dll
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Application.deps.json
+/Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Application.runtimeconfig.json
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Infrastructure.deps.json
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Infrastructure.runtimeconfig.json
 /Users/precious/Projects/InsuranceSystem/InsuranceSystem_/InsuranceSystem.Infrastructure/bin/Debug/net7.0/InsuranceSystem.Infrastructure.dll

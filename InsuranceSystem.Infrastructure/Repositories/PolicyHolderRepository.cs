@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Azure;
 using InsuranceSystem.Application.Interface;
 using InsuranceSystem.Core.Dtos;
 using InsuranceSystem.Domain.Policy;

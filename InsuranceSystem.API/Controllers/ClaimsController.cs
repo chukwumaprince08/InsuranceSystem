@@ -19,23 +19,29 @@ namespace InsuranceSystem.API.Controllers
         {
             _ClaimsService = claimsService;
             _response = new ResponseDto();
-            TempAuth = Request.GetHeader("TempAuth"); // i implemented this temporarily because this is a demo app
         }
 
         /// <summary>
         /// Only administrative staff are allowed to view all claims
         /// </summary>
         /// <returns></returns>
-       
-        [HttpGet("GeAllClaims")]
-        public async Task<object> GeAllClaims()
+
+        [HttpGet("GetClaims")]
+        public async Task<ResponseDto> GetClaims()
         {
             if (string.IsNullOrWhiteSpace(TempAuth))
-                return BadRequest("You are not authorised to access this resource");
+                TempAuth = Request.Headers["TempAuth"];
+
+            if (string.IsNullOrWhiteSpace(TempAuth))
+            {
+                _response.DisplayMessage = "You are not authorised to access this resource";
+                _response.IsSuccess = false;
+                return _response;
+            }
 
             var claims = await _ClaimsService.GetAllClaims();
             _response.Result = claims;
-            return Ok(_response);
+            return _response;
         }
 
         /// <summary>
@@ -43,24 +49,24 @@ namespace InsuranceSystem.API.Controllers
         /// </summary>
         /// <param name="claimsId"></param>
         /// <returns></returns>
-        [HttpGet("GetClaimById")]
-        public async Task<object> GetClaimsById(string claimsId)
+        [HttpGet("GetClaimsById")]
+        public async Task<ResponseDto> GetClaimsById(string claimsId)
         {
             var claim = await _ClaimsService.GetById(claimsId);
             _response.Result = claim;
-            return Ok(_response);
+            return _response;
         }
 
         [HttpPost("CreateClaim")]
-        public async Task<object> CreateClaim([FromBody]ClaimsDto claims)
+        public async Task<ResponseDto> CreateClaim([FromBody]ClaimsDto claims)
         {
             try
             {
                 var response = await _ClaimsService.CreateClaim(claims);
                 _response.Result = response;
                 _response.DisplayMessage = $"Your claim was successfully submitted. " +
-                                           $"Please use Claim Number {response.ClaimsId} to track the status of your claim";
-                return CreatedAtAction("CreateClaim", _response);
+                                           $"Please use Claim Number {response?.ClaimsId} to track the status of your claim";
+                return _response;
             }
             catch (Exception ex)
             {
@@ -83,11 +89,17 @@ namespace InsuranceSystem.API.Controllers
         /// <param name="claimsRequest"></param>
         /// <returns></returns>
         [HttpPut("UpdateClaim")]
-        public async Task<object> UpdateClaim([FromBody] ClaimsStatusUpdateDto claimsRequest)
+        public async Task<ResponseDto> UpdateClaim([FromBody] ClaimsStatusUpdateDto claimsRequest)
         {
-            // temporal fix for authorized users
             if (string.IsNullOrWhiteSpace(TempAuth))
-                return BadRequest("You are not authorised to access this resource");
+                TempAuth = Request.Headers["TempAuth"];
+
+            if (string.IsNullOrWhiteSpace(TempAuth))
+            {
+                _response.DisplayMessage = "You are not authorised to access this resource";
+                _response.IsSuccess = false;
+                return _response;
+            }
 
             var claim = await _ClaimsService.UpdateClaim(claimsRequest.Id, claimsRequest.ClaimsStatus);
             if(claim is null)
@@ -95,8 +107,13 @@ namespace InsuranceSystem.API.Controllers
                 _response = new ResponseDto
                 {
                     DisplayMessage = "Invalid ClaimsID or ClaimsStatus supplied supplied. " +
-                                      "Please check the ReadMe file for guide"
+                                      "Please check the ReadMe file for guide",
+                    Result = null
                 };
+            }
+            else
+            {
+                _response.DisplayMessage = "Successfully Updated claim";
             }
             _response.Result = claim;
             return _response;

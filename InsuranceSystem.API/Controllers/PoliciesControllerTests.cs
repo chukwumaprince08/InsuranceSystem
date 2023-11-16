@@ -14,7 +14,6 @@ namespace InsuranceSystem.API.Controllers
 		private AutoMocker _mocker;
 		private PoliciesController _controller;
 
-
 		[SetUp]
 		public void SetUp()
 		{
@@ -25,17 +24,16 @@ namespace InsuranceSystem.API.Controllers
 		[Test]
 		public async Task TestShouldReturnListOfPolicies()
 		{
-			// Arrange
+			
 			var response = new PolicyHolderDto();
 
 			_mocker.GetMock<IPolicyService>()
 					.Setup(x => x.GetAllPolicies())
 					.ReturnsAsync(new List<PolicyHolderDto> { response });
 
-			// Act
+			
 			var result = await _controller.GetPolicies();
 
-			// Assert
 			Assert.That(result.Result, Contains.Item(response));
 		}
 
@@ -43,8 +41,6 @@ namespace InsuranceSystem.API.Controllers
 		public async Task TestShouldReturnSinglePolicy()
 		{
 			var response = new PolicyHolderDto();
-			var another = new ClaimsDto();
-
 
 			_mocker.GetMock<IPolicyService>()
 					.Setup(x => x.GetByPolicyNumber("H2441"))
